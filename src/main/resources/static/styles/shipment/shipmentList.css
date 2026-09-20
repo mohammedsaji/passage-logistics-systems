@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 32px;
+    padding: 20px 20px;
     gap: 24px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .shipment-header-logo {
-    max-width: 180px;
+    max-width: 10rem;
     height: auto;
 }
 
@@ -46,6 +46,17 @@
 
 .shipment-header-section-a button {
     width: auto;
+
+    background: transparent;
+    color: var(--text);
+    border: var(--border-width) solid var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.shipment-header-section-a button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 1;
 }
 
 .shipment-header-section-b {
@@ -67,7 +78,7 @@
     width: auto;
     padding: 8px 4px;
     background: transparent;
-    color: var(--text);
+    color: blueviolet;
 }
 
 .shipment-navigation-menu {
@@ -95,7 +106,7 @@
 }
 
 .shipment-navigation-menu a:hover {
-    background: var(--surface-hover);
+    background: blueviolet;
 }
 
 /* Body */

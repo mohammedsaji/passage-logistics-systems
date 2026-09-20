@@ -184,7 +184,7 @@ function searchClickEvent() {
                     }
                 }
             }
-        }, { once: true });
+        });
     }
 
     if (searchInput) {

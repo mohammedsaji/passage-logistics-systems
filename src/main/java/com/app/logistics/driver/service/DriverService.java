@@ -11,8 +11,6 @@ import com.app.logistics.driver.dto.DriverResponse;
 import com.app.logistics.driver.repo.DriverRepo;
 import com.app.logistics.driver.entity.Driver;
 import com.app.logistics.driver.utils.DriverMapper;
-import com.app.logistics.manager.dto.ManagerResponse;
-import com.app.logistics.manager.entity.Manager;
 import com.app.logistics.manager.service.ManagerService;
 import com.app.logistics.operator.entity.Operator;
 import com.app.logistics.operator.service.OperatorService;
@@ -27,7 +25,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 

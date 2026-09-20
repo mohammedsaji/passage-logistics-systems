@@ -3,7 +3,8 @@
 }
 
 .operator-navigation-menu.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .operator {
@@ -12,11 +13,12 @@
     flex-direction: column;
 }
 
+/* Header */
 .operator-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 32px;
+    padding: 20px 20px;
 }
 
 .operator-header-brand {
@@ -25,13 +27,14 @@
 }
 
 .operator-header-logo {
-    max-width: 180px;
+    max-width: 10rem;
     height: auto;
 }
 
 .operator-header-actions {
     display: flex;
     align-items: center;
+    gap: 32px;
 }
 
 .operator-header-section-a,
@@ -40,11 +43,66 @@
     align-items: center;
 }
 
-.operator-header-section-a button,
-.operator-header-section-b button {
+/* Dashboard */
+.operator-header-section-a button {
     width: auto;
+    background: transparent;
+    color: var(--text);
+    border: var(--border-width) solid var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.operator-header-section-a button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 1;
+}
+
+/* Navigation */
+.operator-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.operator-navigation-group {
+    position: relative;
+}
+
+.operator-navigation-group > button {
+    width: auto;
+    padding: 8px 4px;
+    background: transparent;
+    color:blueviolet;
+}
+
+.operator-navigation-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    padding-top: 8px;
+}
+
+.operator-navigation-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.operator-navigation-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.operator-navigation-menu a:hover {
+    background: blueviolet;
+}
+
+/* Body */
 .operator-body {
     flex: 1;
     display: flex;
@@ -62,7 +120,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
     border: 1px solid var(--border);
     padding: 32px;
 }
@@ -90,5 +147,15 @@
 
 .operator-body-operator-actions button {
     width: auto;
-    align-self: center;
+
+    background: transparent;
+    color: var(--text);
+    border: var(--border-width) solid var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.operator-body-operator-actions button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 1;
 }

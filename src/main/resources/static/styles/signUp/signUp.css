@@ -5,7 +5,7 @@
 }
 
 .sign-up-header {
-    padding: 20px 32px;
+    padding: 20px 20px;
 }
 
 .sign-up-header-brand {
@@ -14,7 +14,7 @@
 }
 
 .sign-up-header-logo {
-    max-width: 180px;
+    max-width: 10rem;
     height: auto;
 }
 
@@ -65,4 +65,15 @@
 .sign-up-body-sign-up-form button {
     align-self: center;
     margin-top: 16px;
+
+    background: transparent;
+    color: var(--text);
+    border: var(--border-width) solid var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sign-up-body-sign-up-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    opacity: 1;
 }

@@ -4,6 +4,7 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import com.app.logistics.common.exception.APIException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.http.HttpStatus;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -39,8 +40,10 @@ public class Messenger {
             messageHelper.setTo(mailTo);
             messageHelper.setSubject(mailSubject);
             messageHelper.setText(mailContent,true);
+            messageHelper.addInline("plsLogo", new ClassPathResource("static/imgs/PLS.png"));
             javaMailSender.send(mimeMessage);
         }catch (MailException mailException) {
+            mailException.printStackTrace(); // or use a real logger
             return false;
         }catch(MessagingException messagingException){
             throw new APIException("Unable to construct email message.", HttpStatus.BAD_REQUEST);

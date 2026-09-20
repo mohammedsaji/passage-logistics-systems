@@ -211,7 +211,7 @@ public class AccountService {
         if(emailId == null){
             throw new APIException("Provided Email-Id could be null or invalid.",HttpStatus.BAD_REQUEST);
         }
-        if((password != null && !password.isBlank()) || (confirmPassword != null && !confirmPassword.isBlank())){
+        if((password != null && !password.isBlank()) && (confirmPassword != null && !confirmPassword.isBlank())){
             if(!confirmPassword.equals(password)){
                 throw new APIException("Confirm password didn't match with password, enter again.", HttpStatus.BAD_REQUEST);
             }

@@ -108,9 +108,20 @@ function renderOperatorList(operatorList) {
 }
 
 function dynamicLayoutRender(roleArray){
+
+    const userAction = params.get("userAction");
+
+
     const createOperatorBtn = document.getElementById('create-operator-btn');
     if(roleArray.length > 0 && !roleArray.includes("ADMIN")){
         createOperatorBtn.remove();
+    }
+
+    if(userAction === 'Entry shipping'){
+        const operatorHeaderSectionDivB = document.querySelector('.operator-header-section-b');
+        if(operatorHeaderSectionDivB){
+            operatorHeaderSectionDivB.remove();
+        }
     }
 }
 
@@ -188,7 +199,7 @@ function searchClickEvent() {
                     }
                 }
             }
-        }, { once: true });
+        });
     }
 
     if (searchInput) {

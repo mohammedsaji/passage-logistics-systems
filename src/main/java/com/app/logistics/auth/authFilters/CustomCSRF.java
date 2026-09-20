@@ -19,6 +19,15 @@ public class CustomCSRF extends OncePerRequestFilter {
     private final String[] allowedMethod = {"POST", "PUT", "PATCH", "DELETE"};
 
     @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        return path.startsWith("/imgs/")
+                || path.startsWith("/styles/")
+                || path.startsWith("/js/")
+                || path.startsWith("/views/");
+    }
+
+    @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         String servletPath = request.getServletPath();

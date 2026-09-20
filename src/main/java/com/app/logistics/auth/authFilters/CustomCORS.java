@@ -18,6 +18,15 @@ public class CustomCORS extends OncePerRequestFilter {
     private final String allowedHeaders = "Content-Type, X-API-KEY, Username, X-CSRF-TOKEN";
 
     @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        return path.startsWith("/imgs/")
+                || path.startsWith("/styles/")
+                || path.startsWith("/js/")
+                || path.startsWith("/views/");
+    }
+
+    @Override
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws IOException, ServletException{
 
         String extractedOrigin = request.getHeader("Origin");

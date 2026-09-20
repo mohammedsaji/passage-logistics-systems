@@ -10,10 +10,10 @@ public class MailMessage {
             <html>
             <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#24292f;">
                 <div style="max-width:640px;margin:40px auto;padding:0 20px;">
-            
                     <div style="text-align:center;margin-bottom:25px;">
-                        <div style="font-size:32px;font-weight:bold;color:#24292f;">
-                            Passage Logistics Systems
+                        <div style="display:flex;flex-direction:row; justify-content:center; align-items:center; gap:1.5rem;">
+                            <img src="cid:plsLogo" alt="Passage Logistics Systems" style="max-width:150px;height:auto;" />
+                            <h2 style="font-size:32px;font-weight:bold;color:#24292f;">Passage Logistics Systems</h2>
                         </div>
                         <div style="font-size:16px;color:#57606a;margin-top:8px;">
                             Reset your password
@@ -55,7 +55,7 @@ public class MailMessage {
             
                         <p style="font-size:16px;line-height:1.6;margin-bottom:0;">
                             Thanks,<br>
-                            The Passage Logistic Systems Team
+                            The Passage Logistics Systems Team
                         </p>
             
                     </div>
@@ -70,10 +70,10 @@ public class MailMessage {
         <html>
         <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#24292f;">
             <div style="max-width:640px;margin:40px auto;padding:0 20px;">
-
                 <div style="text-align:center;margin-bottom:25px;">
-                    <div style="font-size:32px;font-weight:bold;color:#24292f;">
-                        Passage Logistics Systems
+                    <div style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:1.5rem;">
+                        <img src="cid:plsLogo" alt="Passage Logistics Systems" style="max-width:150px;height:auto;" />
+                        <h2 style="font-size:32px;font-weight:bold;color:#24292f;">Passage Logistics Systems</h2>
                     </div>
                     <div style="font-size:16px;color:#57606a;margin-top:8px;">
                         Shipment Tracking Information
@@ -108,7 +108,7 @@ public class MailMessage {
 
                     <p style="font-size:16px;line-height:1.6;margin-bottom:0;">
                         Thanks,<br>
-                        The Passage Logistic Systems Team
+                        The Passage Logistics Systems Team
                     </p>
 
                 </div>
